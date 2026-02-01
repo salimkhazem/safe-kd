@@ -1,0 +1,5 @@
+sweep:
+  datasets: [cifar10, stl10, aircraft]
+  models: [rn50, convnext_t, vit_s, effb0, swin_t, mnv3s]
+  methods: [erm, multiexit, kd, dkd, safe_kd]
+  seeds: [0]

@@ -1,0 +1,5 @@
+sweep:
+  datasets: [toy2d]
+  models: [rn50]
+  methods: [erm, multiexit, kd, dkd, safe_kd]
+  seeds: [0, 1, 2]
