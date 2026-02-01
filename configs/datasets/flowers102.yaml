@@ -1,0 +1,6 @@
+data:
+  dataset: flowers102
+  num_classes: 102
+  split:
+    val: 500
+    cal: 500

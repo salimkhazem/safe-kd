@@ -1,0 +1,4 @@
+data:
+  dataset: toy2d
+  num_classes: 3
+  input_size: 2

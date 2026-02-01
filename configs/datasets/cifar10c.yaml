@@ -1,0 +1,4 @@
+data:
+  dataset: cifar10c
+  num_classes: 10
+  input_size: 224

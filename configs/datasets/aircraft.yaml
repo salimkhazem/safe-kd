@@ -1,0 +1,6 @@
+data:
+  dataset: aircraft
+  num_classes: 100
+  split:
+    val: 1000
+    cal: 1000
