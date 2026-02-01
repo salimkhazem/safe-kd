@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+results/
+data/
+*.pt
+*.pth
+*.log
+*.jsonl
