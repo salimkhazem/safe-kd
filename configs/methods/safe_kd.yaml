@@ -1,0 +1,4 @@
+method:
+  name: safe_kd
+  alpha: 1.0
+  beta: 1.0
