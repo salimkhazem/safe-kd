@@ -1,0 +1,56 @@
+seed: 0
+output_dir: results
+exp_name: default
+
+train:
+  epochs: 10
+  batch_size: 64
+  eval_batch_size: 128
+  lr: 3.0e-4
+  weight_decay: 0.05
+  warmup_epochs: 1
+  grad_accum_steps: 1
+  amp: true
+  ema_teacher: false
+  ema_decay: 0.999
+  deterministic: true
+  log_every: 50
+
+method:
+  name: erm
+  alpha: 1.0         # teacher DKD weight
+  beta: 1.0          # deep-to-shallow KD weight
+  temperature: 4.0
+  exit_weights: [0.3, 0.3, 0.4]
+  conf_head: "maxprob"  # or "mlp"
+
+model:
+  name: rn50
+  num_classes: 10
+  num_exits: 3
+  exit_points: null
+  pretrained: true
+
+data:
+  dataset: cifar10
+  data_dir: data
+  input_size: 224
+  num_workers: 0
+  split:
+    val: 5000
+    cal: 5000
+  augment:
+    randaug: false
+    mixup: false
+
+calibration:
+  deltas: [0.01, 0.05, 0.10]
+  naive_thresholds: [0.7, 0.8, 0.9]
+
+robustness:
+  enable: false
+  cifar10c_dir: data/cifar10c
+
+sweep:
+  fast_mode: true
+  fast_epochs: 2
